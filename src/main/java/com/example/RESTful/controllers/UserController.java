@@ -38,7 +38,7 @@ public class UserController {
     }
 
     @PutMapping("/users/{id}")
-    User replaceEmployee(@RequestBody User newUser, @PathVariable Long id) {
+    User replaceUser(@RequestBody User newUser, @PathVariable Long id) {
 
         return repository.findById(id)
                 .map(user -> {
@@ -56,7 +56,7 @@ public class UserController {
     }
 
     @DeleteMapping("/users/{id}")
-    void deleteEmployee(@PathVariable Long id) {
+    void deleteUser(@PathVariable Long id) {
         repository.deleteById(id);
     }
 }
