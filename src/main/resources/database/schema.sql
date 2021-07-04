@@ -1,0 +1,9 @@
+
+CREATE TABLE IF NOT EXISTS users (
+    id SERIAL PRIMARY KEY NOT NULL,
+    login VARCHAR(32) UNIQUE NOT NULL,
+    password VARCHAR(32) NOT NULL,
+    firstName VARCHAR(32) NOT NULL,
+    lastName VARCHAR(32) NOT NULL,
+    role INT NOT NULL
+    );
