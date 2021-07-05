@@ -20,8 +20,7 @@ body:
         {
             "name" : "Burger"
         }
-    ],
-    "user" : userId
+    ]
 }
 ```
 request:
