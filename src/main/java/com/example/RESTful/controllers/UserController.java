@@ -16,20 +16,17 @@ public class UserController {
     }
 
 
-    // Aggregate root
-    // tag::get-aggregate-root[]
     @GetMapping("/users")
     List<User> all() {
         return repository.findAll();
     }
-    // end::get-aggregate-root[]
+
 
     @PostMapping("/users")
     User newEmployee(@RequestBody User newUser) {
         return repository.save(newUser);
     }
 
-    // Single item
 
     @GetMapping("/users/{id}")
     User one(@PathVariable Long id) {
@@ -44,9 +41,7 @@ public class UserController {
                 .map(user -> {
                     user.setFirstName(newUser.getFirstName());
                     user.setLastName(newUser.getLastName());
-                    user.setRole(newUser.getRole());
-                    user.setLogin(newUser.getLogin());
-                    user.setPassword(newUser.getPassword());
+                    user.setWalet(newUser.getWalet());
                     return repository.save(user);
                 })
                 .orElseGet(() -> {

@@ -1,5 +1,6 @@
 package com.example.RESTful.models;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,13 +11,11 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name ="users")
-public class User {
+@Table(name ="products")
+public class Ingredient {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String firstName;
-    private String lastName;
-    private Long walet;
+    private String name;
+    private Integer count;
 }
-
